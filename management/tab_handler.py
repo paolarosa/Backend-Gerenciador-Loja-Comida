@@ -5,10 +5,8 @@ def calculate_tab(orders):
     for element_order in orders:
         order_id = element_order["_id"]
         amount = element_order["amount"] 
-        print(amount)
         for element_product in products:
             product_id = element_product["_id"]
-            print(product_id)
             if product_id == order_id:
                 sum_orders += element_product["price"] * amount
 
