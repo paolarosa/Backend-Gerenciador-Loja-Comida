@@ -8,8 +8,6 @@ def get_product_by_id(id):
             return element
     return {}
         
-        
-""" print(get_product_by_id(25))  """
 
 def get_products_by_type(type_product):
     if not type(type_product) == str:
@@ -19,7 +17,6 @@ def get_products_by_type(type_product):
         if type_product == element["type"]:
             new_list.append(element)
     return new_list
-""" print(get_products_by_type("fruit")) """
 
 
 def add_product(menu: list, **kwargs: dict):
@@ -48,8 +45,7 @@ def menu_report():
         if valor > common_type:
             common_type = valor
             type_key = chave
-
-    print(f"{common_type}: {type_key}")
+            
     average_price = round(sum_products/product_count, 2)
 
     return f"Products Count: {product_count} - Average Price: ${average_price} - Most Common Type: {type_key}"
